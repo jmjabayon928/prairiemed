@@ -1,0 +1,70 @@
+server:
+  port: ${SERVER_PORT:8081}
+
+spring:
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5433/PrairieMed}
+    username: ${SPRING_DATASOURCE_USERNAME:postgres}
+    password: ${SPRING_DATASOURCE_PASSWORD:password}
+
+  jpa:
+    hibernate:
+      ddl-auto: none
+    properties:
+      hibernate.jdbc.time_zone: UTC
+      hibernate.default_schema: billing
+
+  flyway:
+    enabled: true
+    schemas: billing
+    default-schema: billing
+    locations: classpath:db/migration
+
+  kafka:
+    # Dev/default: Redpanda exposed on localhost:9092
+    bootstrap-servers: ${SPRING_KAFKA_BOOTSTRAP_SERVERS:localhost:9092}
+    consumer:
+      group-id: ${SPRING_KAFKA_GROUP_ID:billing-service}
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      auto-offset-reset: ${SPRING_KAFKA_AUTO_OFFSET_RESET:earliest}
+    producer:
+      # MERGED: make producer bootstrap explicit for dev
+      bootstrap-servers: ${SPRING_KAFKA_BOOTSTRAP_SERVERS:localhost:9092}
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+
+  data:
+    redis:
+      host: ${SPRING_DATA_REDIS_HOST:localhost}
+      port: ${SPRING_DATA_REDIS_PORT:6379}
+
+logging:
+  level:
+    root: INFO
+    org.springframework.kafka: INFO
+
+---
+# Docker profile: use service names on the Docker network
+spring:
+  config:
+    activate:
+      on-profile: docker
+
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://prairiemed-postgres:5432/PrairieMed}
+    username: ${SPRING_DATASOURCE_USERNAME:postgres}
+    # password read from SPRING_DATASOURCE_PASSWORD env
+
+  kafka:
+    # MERGED: inside Docker, talk to Redpanda on 29092
+    bootstrap-servers: ${SPRING_KAFKA_BOOTSTRAP_SERVERS:redpanda:29092}
+    producer:
+      bootstrap-servers: ${SPRING_KAFKA_BOOTSTRAP_SERVERS:redpanda:29092}
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+
+  data:
+    redis:
+      host: ${SPRING_DATA_REDIS_HOST:prairiemed-redis}
+      port: ${SPRING_DATA_REDIS_PORT:6379}

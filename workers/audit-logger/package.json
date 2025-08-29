@@ -1,0 +1,11 @@
+{
+  "name": "audit-logger",
+  "private": true,
+  "type": "module",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "kafkajs": "^2.2.4",
+    "mongodb": "^6.8.0"
+  }
+}
