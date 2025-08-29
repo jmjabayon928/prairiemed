@@ -1,0 +1,189 @@
+{
+  "info": {
+    "name": "PrairieMed API",
+    "_postman_id": "8d0f8c46-0b8c-4d3a-9d2a-888888888888",
+    "description": "Postman collection for PrairieMed local development.\nIncludes Billing REST, GraphQL, and health checks.\nUpdate variables as needed after import.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Billing REST",
+      "item": [
+        {
+          "name": "Billing Health (/actuator/health)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{billing_base_url}}/actuator/health",
+              "host": [
+                "{{billing_base_url}}"
+              ],
+              "path": [
+                "actuator",
+                "health"
+              ]
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"status is 200\", function () {",
+                  "  pm.response.to.have.status(200);",
+                  "});"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Patient Billing Summary",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{billing_base_url}}/api/billing/patients/{{patient_id}}/summary",
+              "host": [
+                "{{billing_base_url}}"
+              ],
+              "path": [
+                "api",
+                "billing",
+                "patients",
+                "{{patient_id}}",
+                "summary"
+              ]
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"status is 200\", function () {",
+                  "  pm.response.to.have.status(200);",
+                  "});"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "GraphQL",
+      "item": [
+        {
+          "name": "Introspection Ping (__typename)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{graphql_bearer}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"query\": \"{ __typename }\"}"
+            },
+            "url": {
+              "raw": "{{graphql_url}}",
+              "host": [
+                "{{graphql_url}}"
+              ]
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"status is 200\", function () {",
+                  "  pm.response.to.have.status(200);",
+                  "});"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Patient Billing Summary (GraphQL)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{graphql_bearer}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"query\": \"query Billing($id: ID!) {\\n  patient(id: $id) {\\n    billingSummary {\\n      totals {\\n        draftCount\\n        draftAmount\\n        paidCount\\n        paidAmount\\n        currency\\n      }\\n    }\\n  }\\n}\", \"variables\": {\"id\": \"{{patient_id}}\"}}"
+            },
+            "url": {
+              "raw": "{{graphql_url}}",
+              "host": [
+                "{{graphql_url}}"
+              ]
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test(\"status is 200\", function () {",
+                  "  pm.response.to.have.status(200);",
+                  "});",
+                  "pm.test(\"no GraphQL errors\", function () {",
+                  "  var body = pm.response.json();",
+                  "  pm.expect(body).to.be.an('object');",
+                  "  pm.expect(body.errors).to.be.undefined;",
+                  "});"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "billing_base_url",
+      "value": "http://localhost:8081"
+    },
+    {
+      "key": "graphql_url",
+      "value": "http://localhost:4000/graphql"
+    },
+    {
+      "key": "graphql_bearer",
+      "value": "dev-admin"
+    },
+    {
+      "key": "patient_id",
+      "value": "767b8d60-7e6b-410f-9de5-cb42292d3c61"
+    }
+  ]
+}
