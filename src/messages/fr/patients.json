@@ -1,0 +1,118 @@
+{
+  "title": "Patients",
+  "loading": "Chargement…",
+
+  "actions": {
+    "new": "Nouveau patient",
+    "edit": "Modifier",
+    "save": "Enregistrer",
+    "cancel": "Annuler",
+    "delete": "Supprimer"
+  },
+
+  "search": {
+    "placeholder": "Nom, NDM, téléphone ou identifiant…",
+    "aria": "Rechercher des patients",
+    "button": "Rechercher",
+    "noResults": "Aucun patient trouvé."
+  },
+
+  "table": {
+    "name": "Nom",
+    "dob": "DN",
+    "mrn": "NDM",
+    "phone": "Téléphone",
+    "email": "Courriel",
+    "view": "Voir",
+    "empty": "Aucun patient trouvé."
+  },
+
+  "detail": {
+    "mrn": "NDM"
+  },
+
+  "tabs": {
+    "summary": "Résumé",
+    "contacts": "Contacts",
+    "insurance": "Assurance",
+    "consents": "Consentements",
+    "adt": "Admissions",
+    "merges": "Fusions"
+  },
+
+  "form": {
+    "firstName": "Prénom",
+    "lastName": "Nom",
+    "dob": "Date de naissance",
+    "sex": "Sexe",
+    "language": "Langue préférée",
+    "email": "Courriel",
+    "phone": "Téléphone",
+    "vip": "VIP",
+    "confidential": "Confidentiel"
+  },
+
+  "contacts": {
+    "title": "Contacts",
+    "type": "Type",
+    "name": "Nom",
+    "relationship": "Lien",
+    "phone": "Téléphone",
+    "email": "Courriel",
+    "add": "Ajouter un contact",
+    "remove": "Supprimer",
+    "empty": "Aucun contact pour l’instant.",
+    "types": {
+      "next_of_kin": "Proche parent",
+      "emergency": "Urgence",
+      "caregiver": "Aidant"
+    }
+  },
+
+  "insurance": {
+    "title": "Assurance",
+    "payer": "Assureur",
+    "memberId": "Numéro d’adhérent",
+    "groupId": "Numéro de groupe",
+    "priority": "Priorité",
+    "start": "Date de début",
+    "end": "Date de fin",
+    "add": "Ajouter une assurance",
+    "remove": "Supprimer",
+    "empty": "Aucune assurance."
+  },
+
+  "consents": {
+    "title": "Consentements & confidentialité",
+    "type": "Type",
+    "status": "Statut",
+    "note": "Note",
+    "add": "Ajouter un consentement",
+    "empty": "Aucun consentement enregistré.",
+    "types": {
+      "treatment": "Consentement au traitement",
+      "release": "Communication de renseignements",
+      "research": "Recherche",
+      "portal": "Portail patient"
+    },
+    "statuses": {
+      "granted": "Accordé",
+      "revoked": "Révoqué",
+      "restricted": "Restreint"
+    }
+  },
+
+  "adt": {
+    "title": "Admissions / Transferts / Sorties",
+    "admit": "Admettre",
+    "transfer": "Transférer",
+    "discharge": "Sortie"
+  },
+
+  "messages": {
+    "created": "Patient créé.",
+    "updated": "Patient mis à jour.",
+    "deleted": "Patient supprimé.",
+    "forbidden": "Vous n’avez pas l’autorisation pour cette action."
+  }
+}

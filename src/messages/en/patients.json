@@ -1,0 +1,118 @@
+{
+  "title": "Patients",
+  "loading": "Loading…",
+
+  "actions": {
+    "new": "New patient",
+    "edit": "Edit",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete"
+  },
+
+  "search": {
+    "placeholder": "Name, MRN, phone, or ID...",
+    "aria": "Search patients",
+    "button": "Search",
+    "noResults": "No patients found."
+  },
+
+  "table": {
+    "name": "Name",
+    "dob": "DOB",
+    "mrn": "MRN",
+    "phone": "Phone",
+    "email": "Email",
+    "view": "View",
+    "empty": "No patients found."
+  },
+
+  "detail": {
+    "mrn": "MRN"
+  },
+
+  "tabs": {
+    "summary": "Summary",
+    "contacts": "Contacts",
+    "insurance": "Insurance",
+    "consents": "Consents",
+    "adt": "Admissions",
+    "merges": "Merges"
+  },
+
+  "form": {
+    "firstName": "First name",
+    "lastName": "Last name",
+    "dob": "Date of birth",
+    "sex": "Sex",
+    "language": "Preferred language",
+    "email": "Email",
+    "phone": "Phone",
+    "vip": "VIP",
+    "confidential": "Confidential"
+  },
+
+  "contacts": {
+    "title": "Contacts",
+    "type": "Type",
+    "name": "Name",
+    "relationship": "Relationship",
+    "phone": "Phone",
+    "email": "Email",
+    "add": "Add contact",
+    "remove": "Remove",
+    "empty": "No contacts yet.",
+    "types": {
+      "next_of_kin": "Next of Kin",
+      "emergency": "Emergency",
+      "caregiver": "Caregiver"
+    }
+  },
+
+  "insurance": {
+    "title": "Insurance",
+    "payer": "Payer",
+    "memberId": "Member ID",
+    "groupId": "Group ID",
+    "priority": "Priority",
+    "start": "Start date",
+    "end": "End date",
+    "add": "Add insurance",
+    "remove": "Remove",
+    "empty": "No insurances yet."
+  },
+
+  "consents": {
+    "title": "Consents & Privacy",
+    "type": "Type",
+    "status": "Status",
+    "note": "Note",
+    "add": "Add consent",
+    "empty": "No consents recorded.",
+    "types": {
+      "treatment": "Treatment consent",
+      "release": "Information release",
+      "research": "Research",
+      "portal": "Patient portal"
+    },
+    "statuses": {
+      "granted": "Granted",
+      "revoked": "Revoked",
+      "restricted": "Restricted"
+    }
+  },
+
+  "adt": {
+    "title": "Admissions / Transfers / Discharges",
+    "admit": "Admit",
+    "transfer": "Transfer",
+    "discharge": "Discharge"
+  },
+
+  "messages": {
+    "created": "Patient created.",
+    "updated": "Patient updated.",
+    "deleted": "Patient removed.",
+    "forbidden": "You don't have permission for this action."
+  }
+}

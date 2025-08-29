@@ -1,0 +1,98 @@
+{
+  "or": "Or",
+  "comingSoon": "Coming soon",
+  "errors": {
+    "generic": "Something went wrong. Please try again."
+  },
+  "lang": {
+    "label": "Language",
+    "en": "English",
+    "fr": "Français"
+  },
+  "menu": {
+    "dashboard": {
+      "_": "Dashboard",
+      "overview": "Overview",
+      "notifications": "Notifications",
+      "quickLinks": "Quick Links"
+    },
+    "patients": {
+      "_": "Patients",
+      "registry": "Registry",
+      "admissions": "Admissions",
+      "transfers": "Transfers",
+      "search": "Search"
+    },
+    "appointments": {
+      "_": "Appointments",
+      "calendar": "Calendar",
+      "types": "Types",
+      "rules": "Rules"
+    },
+    "clinical": {
+      "_": "Clinical",
+      "ehr": "EHR",
+      "encounters": "Encounters",
+      "diagnosis": "Diagnosis",
+      "forms": "Forms"
+    },
+    "laboratory": {
+      "_": "Laboratory",
+      "orders": "Orders",
+      "results": "Results",
+      "catalog": "Catalog"
+    },
+    "pharmacy": {
+      "_": "Pharmacy",
+      "inventory": "Inventory",
+      "prescriptions": "Prescriptions",
+      "dispensing": "Dispensing"
+    },
+    "billing": {
+      "_": "Billing",
+      "invoices": "Invoices",
+      "payments": "Payments",
+      "claims": "Claims"
+    },
+    "hr": {
+      "_": "HR",
+      "staff": "Staff",
+      "roles": "Roles",
+      "attendance": "Attendance"
+    },
+    "inventory": {
+      "_": "Inventory",
+      "supplies": "Supplies",
+      "equipment": "Equipment",
+      "transactions": "Transactions"
+    },
+    "reports": {
+      "_": "Reports",
+      "clinical": "Clinical",
+      "financial": "Financial",
+      "kpis": "KPIs"
+    },
+    "admin": {
+      "_": "Admin",
+      "users": "Users",
+      "facilities": "Facilities",
+      "audit": "Audit",
+      "settings": "Settings"
+    },
+    "other": {
+      "pages": "Pages",
+      "blank": "Blank",
+      "error404": "Error 404",
+      "ui": "UI",
+      "alerts": "Alerts",
+      "avatar": "Avatar",
+      "badge": "Badge",
+      "buttons": "Buttons",
+      "images": "Images",
+      "videos": "Videos",
+      "auth": "Auth",
+      "signin": "Sign in",
+      "signup": "Sign up"
+    }
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "or": "Ou",
+  "comingSoon": "Bientôt disponible",
+  "errors": {
+    "generic": "Une erreur s'est produite. Veuillez réessayer."
+  },
+  "lang": {
+    "label": "Langue",
+    "en": "Anglais",
+    "fr": "Français"
+  },
+  "menu": {
+    "dashboard": {
+      "_": "Tableau de bord",
+      "overview": "Vue d'ensemble",
+      "notifications": "Notifications",
+      "quickLinks": "Liens rapides"
+    },
+    "patients": {
+      "_": "Patients",
+      "registry": "Registre",
+      "admissions": "Admissions",
+      "transfers": "Transferts",
+      "search": "Recherche"
+    },
+    "appointments": {
+      "_": "Rendez-vous",
+      "calendar": "Calendrier",
+      "types": "Types",
+      "rules": "Règles"
+    },
+    "clinical": {
+      "_": "Clinique",
+      "ehr": "Dossier médical (EHR)",
+      "encounters": "Rencontres",
+      "diagnosis": "Diagnostic",
+      "forms": "Formulaires"
+    },
+    "laboratory": {
+      "_": "Laboratoire",
+      "orders": "Ordonnances",
+      "results": "Résultats",
+      "catalog": "Catalogue"
+    },
+    "pharmacy": {
+      "_": "Pharmacie",
+      "inventory": "Inventaire",
+      "prescriptions": "Prescriptions",
+      "dispensing": "Dispensation"
+    },
+    "billing": {
+      "_": "Facturation",
+      "invoices": "Factures",
+      "payments": "Paiements",
+      "claims": "Demandes de remboursement"
+    },
+    "hr": {
+      "_": "RH",
+      "staff": "Personnel",
+      "roles": "Rôles",
+      "attendance": "Présence"
+    },
+    "inventory": {
+      "_": "Inventaire",
+      "supplies": "Fournitures",
+      "equipment": "Équipement",
+      "transactions": "Transactions"
+    },
+    "reports": {
+      "_": "Rapports",
+      "clinical": "Cliniques",
+      "financial": "Financiers",
+      "kpis": "KPIs"
+    },
+    "admin": {
+      "_": "Administration",
+      "users": "Utilisateurs",
+      "facilities": "Établissements",
+      "audit": "Audit",
+      "settings": "Paramètres"
+    },
+    "other": {
+      "pages": "Pages",
+      "blank": "Vide",
+      "error404": "Erreur 404",
+      "ui": "Interface",
+      "alerts": "Alertes",
+      "avatar": "Avatar",
+      "badge": "Badge",
+      "buttons": "Boutons",
+      "images": "Images",
+      "videos": "Vidéos",
+      "auth": "Authentification",
+      "signin": "Connexion",
+      "signup": "Inscription"
+    }
+  }
+}
