@@ -1,0 +1,78 @@
+# -------------------------------------------------
+# Node / JavaScript / TypeScript
+# -------------------------------------------------
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.tsbuildinfo
+*.tgz
+package-lock.json
+yarn.lock
+.pnpm-debug.log*
+
+# -------------------------------------------------
+# Next.js / React
+# -------------------------------------------------
+.next/
+out/
+.vercel/
+
+# -------------------------------------------------
+# Build / Dist
+# -------------------------------------------------
+build/
+dist/
+
+# -------------------------------------------------
+# IDE / Editor
+# -------------------------------------------------
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# -------------------------------------------------
+# OS / Misc
+# -------------------------------------------------
+.DS_Store
+Thumbs.db
+*.pem
+
+# -------------------------------------------------
+# Testing / Coverage
+# -------------------------------------------------
+coverage/
+jest-html-reporters-*.html
+*.lcov
+
+# -------------------------------------------------
+# Local Env & Secrets
+# -------------------------------------------------
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+*.local
+
+# Keep example files (safe for GitHub)
+!.env.example
+
+# -------------------------------------------------
+# Docker / Infra
+# -------------------------------------------------
+# Don’t commit local container volumes or db data
+docker-compose.override.yml
+infra/db/postgres/init/*.sql   # you can remove this if you want schema in repo
+pgdata/
+mongodata/
+
+# -------------------------------------------------
+# TypeScript / Next.js Artifacts
+# -------------------------------------------------
+next-env.d.ts
